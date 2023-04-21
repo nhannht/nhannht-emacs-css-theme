@@ -1,0 +1,24 @@
+{
+  "name": "nhannht-emacs-css-theme",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dist:tailwind": "node build.mjs --tailwind",
+    "dist:org": "node build.mjs --org",
+    "dist": "node build.mjs --all",
+    "dist:watch": "node build.mjs --watch",
+    "server": "live-server dist --port=8080 --no-browser --watch=dist",
+    "dev": "npm run dist:watch & npm run server"
+  },
+  "dependencies": {
+    "chalk": "^5.2.0",
+    "commander": "^10.0.1",
+    "fs-extra": "^11.1.1"
+  },
+  "devDependencies": {
+    "chokidar": "^3.5.3",
+    "live-server": "git+https://github.com/tapio/live-server.git#ad22544",
+    "tailwindcss": "^3.3.1"
+  }
+}

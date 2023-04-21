@@ -1,0 +1,737 @@
+@charset "UTF-8";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+    @font-face {
+        font-family: "et-book";
+        src: url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot");
+        src: url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot?#iefix") format("embedded-opentype"), url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.woff") format("woff"), url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.ttf") format("truetype"), url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.svg#etbookromanosf") format("svg");
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: "et-book";
+        src: url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot");
+        src: url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot?#iefix") format("embedded-opentype"), url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.woff") format("woff"), url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.ttf") format("truetype"), url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.svg#etbookromanosf") format("svg");
+        font-weight: normal;
+        font-style: italic;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: "et-book";
+        src: url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot");
+        src: url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot?#iefix") format("embedded-opentype"), url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.woff") format("woff"), url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.ttf") format("truetype"), url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.svg#etbookromanosf") format("svg");
+        font-weight: bold;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: "et-book-roman-old-style";
+        src: url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot");
+        src: url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot?#iefix") format("embedded-opentype"), url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.woff") format("woff"), url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.ttf") format("truetype"), url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.svg#etbookromanosf") format("svg");
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+
+}
+
+html {
+    font-size: 15px
+}
+
+body {
+    font-family: et-book, serif;
+    @apply max-w-7xl w-screen ml-auto mr-auto pl-5 text-base  bg-white text-black;
+
+}
+.footnotes {
+@apply max-w-4xl pl-10 pt-10 text-lg italic border-t border-gray-200;
+}
+.sidenote {
+@apply float-right clear-right -mr-96 w-1/2 mt-1 mb-0 text-lg leading-snug align-baseline relative;
+}
+
+#content {
+    @apply pl-40 max-w-4xl ;
+    font-family: et-book, serif;
+}
+.figure > p + p {
+    @apply float-right clear-right -mr-96 w-1/2 mt-1 mb-0 text-lg leading-snug align-baseline relative;
+}
+.org-src-container > .org-src-name {
+    @apply float-right
+}
+@media print {
+    .dontprint {
+        display: none;
+    }
+}
+
+#preamble {
+}
+
+#banner {
+    text-align: center;
+}
+
+#tabs {
+
+}
+
+#tabs ul {
+}
+
+#tabs li {
+
+}
+
+#tabs li a {
+
+}
+
+#tabs li a:hover {
+    background: #759FCF;
+    color: #FFFFFF;
+}
+
+#tabs li.ui-tabs-active a {
+
+}
+
+
+
+#postamble {
+    font-family: et-book, serif;
+    /* display none*/
+    @apply  hidden
+}
+
+
+b {
+    color: #000000;
+    @apply text-black
+}
+
+i {
+    color: #1A1A1A;
+    @apply text-gray-950
+}
+
+h1, ul#tabs, h2, h3, h4, h5 {
+}
+
+h1 {
+
+    @apply text-5xl
+    text-black
+    bg-none
+    mb-6
+    mt-16
+    italic
+    leading-none;
+    font-family: et-book;
+
+}
+
+h2 {
+    @apply
+    font-bold
+    mt-9
+    mb-6
+    text-4xl
+    leading-none
+}
+
+h3 {
+    @apply
+    font-bold
+    mt-9
+    mb-6
+    text-lg
+    leading-none
+}
+
+h4 {
+    @apply
+    font-normal
+    mt-9
+    mb-6
+    text-base
+    leading-none
+}
+
+h5 {
+    @apply
+    font-normal
+    mt-9
+    mb-6
+    text-sm
+    leading-none
+}
+
+h6 {
+    @apply
+    font-normal
+    mt-9
+    mb-6
+    text-xs
+    leading-none
+}
+
+.DONEheader {
+    color: #ADADAD;
+    text-decoration: line-through;
+}
+
+h3.DONEheader {
+    border-bottom: 1px solid #DDDDDD;
+}
+
+h4.DONEheader {
+    border-bottom: 1px dotted #DDDDDD;
+}
+
+.outline-text-2, .outline-text-3, .outline-text-4, .outline-text-5,
+.outline-3 > ul,
+.outline-4 > ol, #text-footnotes {
+    @apply ml-4;
+}
+
+li > .outline-text-5 {
+    margin-left: 20px;
+}
+
+ul, ol {
+    padding-left: 1.5em;
+}
+
+dt {
+    color: #1572AE;
+    font-weight: bold;
+}
+
+dd {
+    margin-bottom: 6px;
+}
+
+pre {
+    /* Use #EAEAEA for background-color of border with src code block's name */
+    background-color: #F8F8FF;
+    border: 1px solid #DEDEDE;
+    color: #444444;
+    /*font-family: monospace;*/
+    line-height: 1.14em;
+    overflow: auto;
+    /* overflow-x: auto; */
+    padding: 10px;
+}
+
+code {
+    background-color: #F8F8FF;
+    border: 1px solid #DEDEDE;
+    color: #444444;
+    /*font-family: monospace;*/
+    /* font-size: 0.93em; */
+    margin: 0px 1px;
+    padding: 0px 2px;
+}
+
+li > p, li > ul, li > .inlinetask, li > dl {
+    margin-left: 0px;
+}
+
+dd > p, dd > ul, dd > .inlinetask, dd > dl {
+    margin-left: 0px;
+}
+
+li.checked {
+}
+
+li.halfchecked {
+}
+
+li.unchecked {
+}
+
+a, a:link, a:visited {
+    color: #2061A2;
+    text-decoration: none;
+}
+
+a:hover {
+    @apply underline;
+}
+
+a:focus {
+    outline: none;
+}
+
+#search {
+
+}
+
+#search input {
+
+}
+
+#search button {
+
+}
+
+table {
+    border-collapse: collapse;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+table td {
+    padding: 3px 5px;
+}
+
+table, th, td {
+    border: 1px solid #B5DAF1;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+}
+
+th {
+    border-width: 1px 2px;
+    border-color: white;
+    background-color: #2061A2;
+    color: white;
+}
+
+caption {
+    color: #8D8D84;
+}
+
+
+
+.figure {
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    @apply m-4 p-0 border-0 font-normal align-baseline
+    /*@apply w-screen clear-both*/
+}
+
+
+img {
+    display: block;
+    @apply w-full
+}
+.img-full {
+
+    @apply w-1/2 block
+}
+
+.img-side {
+    @apply w-1/2 float-right -mr-96 relative align-baseline clear-right mt-1 mb-10 leading-snug
+}
+.fixme {
+    color: #CC0000;
+    display: inline-block;
+    height: 16px;
+    text-indent: -9999px;
+    width: 82px;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.center {
+    text-align: center;
+}
+
+.justify {
+    text-align: justify;
+}
+
+.inlinetask {
+    background-color: #F7F7F7;
+    border-collapse: separate;
+    border-color: #EEEEEE #EEEEEE #EEEEEE #1E90FF;
+    border-style: solid;
+    border-width: 1px 1px 1px 6px;
+    padding: 8px 8px 0px 8px;
+    margin: 10px 0px;
+}
+
+.inlinetask td {
+    padding: 2px 5px 0px 2px;
+    border: 0px;
+}
+
+.info {
+    border: 1px solid;
+    color: #00529B;
+    padding: 4px 10px 4px 52px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    margin: 10px 0px;
+}
+
+.tip {
+    border: 1px solid;
+    color: #4F8A10;
+    padding: 4px 10px 4px 52px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    margin: 10px 0px;
+}
+
+.note {
+    border: 1px solid;
+    color: #9F6000;
+    padding: 4px 10px 4px 52px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    margin: 10px 0px;
+}
+
+.warning {
+    border: 1px solid;
+    color: #D8000C;
+    padding: 4px 10px 4px 52px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    margin: 10px 0px;
+}
+
+.todo, .done {
+    margin: 10px 0;
+    padding: 0px 2px;
+}
+
+.NEW {
+    background-color: #FDFCD8;
+    border: 1px solid #EEE9C3;
+    color: #302B13;
+    font-weight: normal;
+}
+
+.TODO {
+    background-color: #FED5D7;
+    border: 1px solid #FC5158;
+    color: #FC5158;
+}
+
+.STRT, .STARTED {
+    background-color: #FEF2D4;
+    border: 1px solid #FDBF3D;
+    color: #FDBF3D;
+}
+
+.WAIT, .WAITING, .DLGT, .DELEGATED {
+    background-color: #DFFFDF;
+    border: 1px solid #55BA80;
+    color: #55BA80;
+}
+
+.SDAY, .SOMEDAY, .DFRD, .DEFERRED {
+    background-color: #D3EEFF;
+    border: 1px solid #42B5FF;
+    color: #42B5FF;
+}
+
+.DONE, .CANX, .CANCELED {
+    background-color: #F2F2EE;
+    border: 1px solid #969696;
+    color: #969696;
+}
+
+.tag span {
+    background-color: #EDEDED;
+    border: 1px solid #EDEDED;
+    color: #939393;
+    cursor: pointer;
+    display: block;
+    float: right;
+    font-size: 80%;
+    font-weight: normal;
+    margin: 0 3px;
+    padding: 1px 2px;
+    border-radius: 10px;
+}
+
+#right-panel-contents .tag span {
+    font-size: 100%;
+}
+
+.tag span:hover {
+    background: #BABDB6;
+}
+
+.tag .FLAGGED {
+    background-color: #EDC6C8;
+    border: 1px solid #EDC6C8;
+    color: #C15F4E;
+}
+
+.tag .selected {
+    background-color: #FFEBC1;
+    border: 1px solid #FDBF3B;
+    color: #A6750C;
+}
+
+#listOfTags .tag span {
+    display: inline;
+    float: none;
+}
+
+span.todo {
+    cursor: pointer;
+    /* display: block; */
+    /* float: left; */
+    margin: -1px 3px 0px 0px;
+}
+
+span.todo:hover {
+    background: #BABDB6;
+    color: #888888;
+}
+
+span.todo .selected {
+    background-color: #FFEBC1;
+    border-color: #FDBF3B;
+    color: #A6750C;
+}
+
+.matchtag {
+    background-color: #FBFFC0;
+}
+
+.matchNEW {
+    background-color: #FDFCD8;
+}
+
+.matchTODO {
+    background-color: #FFE6E4;
+}
+
+.matchSTRT {
+    background-color: #FEF2D4;
+}
+
+.matchWAIT, .matchDLGT {
+    background-color: #DFFFDF;
+}
+
+.matchSDAY, .matchDFRD {
+    background-color: #E0EFFF;
+}
+
+#listOfTodo, #listOfDone, #listOfTags {
+    /* bottom: 10px; /\* together with this to put the div at the bottom*\/ */
+    /* left: 10px; */
+    /* list-style-type: none; */
+    margin-left: 0px;
+    /* position: fixed; /\* this is the magic *\/ */
+}
+
+.timestamp-kwd {
+    background-color: #FFF1F1;
+    color: #880000;
+    margin: 0px 4px 0px 0px;
+    padding: 2px 0px 2px 2px;
+}
+
+.timestamp {
+    color: #777777;
+    font-size: 80%;
+}
+
+#table-of-contents {
+    @apply bg-black text-white table p-1 m-1 max-w-2xl float-right w-auto -mr-96 -top-36 relative
+
+}
+
+
+#table-of-contents h2 {
+    /*display: none;*/
+    @apply text-white font-bold text-xl bg-black
+}
+
+#table-of-contents ul {
+
+}
+
+#table-of-contents li {
+    }
+
+#table-of-contents li li {
+    margin-left: 1.5em;
+}
+
+#table-of-contents li li li {
+    font-size: 0.8em;
+}
+
+#table-of-contents a {
+    @apply text-white text-base
+}
+
+#table-of-contents a:hover {
+    color: #9920ce;
+    text-decoration: underline;
+}
+
+#minitoc {
+    background-color: #FFFFDD;
+    border: 1px solid #E4E4E4;
+    color: #484848;
+    line-height: 1.2em;
+    margin: 12px;
+    padding: 4px;
+    position: fixed;
+    width: auto;
+    white-space: pre;
+}
+
+#minitoc a {
+    display: block;
+    font-size: 10px;
+    font-weight: normal;
+}
+
+#minitoc a {
+    display: none;
+}
+
+#minitoc:hover a {
+    display: block;
+}
+
+#minitoc h2 {
+    margin: 3px 0px;
+    border: none;
+    font-size: 11px;
+}
+
+p.verse {
+    color: #808080;
+    font-style: italic;
+}
+
+.example {
+    background-color: #DDFADE;
+    border: 1px solid #9EC49F;
+    color: #333333;
+}
+
+.alert {
+    font-weight: bold;
+    color: #FF0000;
+}
+
+#toTop {
+    background: #F7F7F7;
+    border: 1px solid #CCCCCC;
+    top: 10px; /* together with this to put the div at the top */
+    color: #333333;
+    cursor: pointer;
+    display: none;
+    font-family: verdana;
+    font-size: 11px;
+    padding: 5px;
+    position: fixed; /* this is the magic */
+    right: 10px;
+    text-align: center;
+    width: 100px;
+    z-index: 999;
+}
+
+#toTop:hover {
+    text-decoration: underline;
+}
+
+#left-panel-wrapper {
+    position: fixed;
+    z-index: 200;
+    /* display: none; /\* hide the panel if Javascript is not running *\/ */
+}
+
+#left-panel-contents {
+    background-color: #EFEFEF;
+    border-right: 1px dotted #ADADAD;
+    display: none;
+    height: 100%;
+    left: 0px;
+    position: fixed;
+    text-align: left;
+    top: 0;
+    width: 199px;
+    z-index: 200;
+    padding-top: 7px;
+    padding-left: 7px;
+}
+
+#left-panel-button {
+    transform: rotate(90deg);
+    background-color: #EFEFEF;
+    border: 1px dotted #ADADAD;
+    border-bottom-width: 0px;
+    left: -23px;
+    position: fixed;
+    top: 50%;
+    z-index: 200;
+    padding: 2px 5px 5px 5px;
+}
+
+#right-panel-wrapper {
+    position: fixed;
+    z-index: 200;
+    /* display: none; /\* hide the panel if Javascript is not running *\/ */
+}
+
+#right-panel-contents {
+    background-color: #EFEFEF;
+    border-left: 1px dotted #ADADAD;
+    display: none;
+    height: 100%;
+    right: 0px;
+    position: fixed;
+    text-align: left;
+    top: 0;
+    width: 199px;
+    z-index: 200;
+    padding-top: 7px;
+    padding-left: 7px;
+}
+
+.org-src-container {
+    @apply flex flex-col rounded-2xl bg-gray-100 p-2 m-2
+}
+
+.snippet-copy-to-clipboard {
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 0.9em;
+    text-decoration: underline;
+}
+
+.copy-to-clipboard-button:hover {
+    cursor: pointer;
+}
