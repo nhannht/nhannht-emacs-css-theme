@@ -1,0 +1,17 @@
+#+TITLE: Package
+#+SETUPFILE: ./nhannht-theme.setup
+#+HTML_CONTAINER: div
+#+OPTIONS: broken-links:mark
+
+* A naive theme for my so-call publish essays
+
+** Problem: Want to write and publish my essays in Emacs
+
+*** But I feel frustration when look at other already open-source solution.
+
+*** So I built my own solution. Hope that it will work out-of-the-box
+
+The design and idea base on Edward Tufte design.
+#+begin_sidenote
+You can read about this design at [[https://edwardtufte.github.io/tufte-css/][this page]]
+#+end_sidenote
