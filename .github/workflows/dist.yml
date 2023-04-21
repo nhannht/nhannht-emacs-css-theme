@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        emacs_version: snapshot
+        emacs_version:  [27.1]
 
     steps:
       - uses: purcell/setup-emacs@master
